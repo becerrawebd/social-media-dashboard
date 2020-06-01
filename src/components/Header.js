@@ -5,7 +5,7 @@ import SwitchTheme from "./SwitchTheme";
 
 const H1 = styled.h1`
   color: ${props => props.theme.colors.textPrimary};
-  margin-bottom: 0;
+  margin: 5px 0;
 `
 
 const P = styled.p`

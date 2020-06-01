@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const Container = styled.div`
     box-sizing: border-box;
-    margin: 1rem 0;
+    margin: 10px 0;
     width: 80vw;
     display: flex;
     flex-direction: column;

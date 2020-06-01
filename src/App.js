@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import styled from "styled-components";
 import Header from "./components/Header";
 import SocialMediaGeneral from "./components/SocialMediaGeneral";
+import SocialMediaToday from "./components/SocialMediaToday";
 import data from "./data";
 
 const Layout = styled.div`
@@ -44,7 +45,7 @@ const light = {
     brightRed: "hsl(356, 69%, 56%)",
     facebook: "hsl(208, 92%, 53%)",
     twitter: "hsl(203, 89%, 53%)",
-    instagram: "linear-gradient(90deg, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%)",
+    instagram: "linear-gradient(90deg, hsl(37, 97%, 70%) 0%, hsl(329, 70%, 58%) 100%)",
     youtube: "hsl(348, 97%, 39%)"
   }
 }
@@ -57,6 +58,7 @@ const App = () => {
       <Layout>
         <Header setDarkMode={setDarkMode} isDarkMode={darkMode}/>
         <SocialMediaGeneral data={data}/>
+        <SocialMediaToday data={data}/>
       </Layout>
     </ThemeProvider>
   );

@@ -7,30 +7,24 @@ import youtube from "../images/icon-youtube.svg";
 import up from "../images/icon-up.svg";
 import down from "../images/icon-down.svg";
 
-// border-style: 4px solid ${props => props.theme.colors[props.social_media]};
-
 const StyledCard = styled.div`
-position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   padding: 0.5rem;
+  padding-top: 0;
+  position: relative;
+  margin-bottom: 1rem;
   background: ${(props) => props.theme.colors.backgroundCard};
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 2rem;
-  &:after {
-      top: 0;
-      left: 0;
-      position: absolute;
-    content: "";
-    height: 5px;
-    display: block;
-    background: ${(props) => props.theme.colors[props.social_media]};
-  }
   @media (min-width: 768px) {
     margin-right: 2rem;
+    margin-bottom: 0;
+    &:last-child {
+      margin-right: 0;
+    }
   }
   &:hover {
     background: ${(props) => props.theme.colors.hoverCard};
@@ -40,6 +34,7 @@ position: relative;
 const CardHeader = styled.div`
   display: flex;
   justify-content: space-between;
+  padding-top: 1rem;
   img {
     object-fit: contain;
     margin-right: 7px;
@@ -55,7 +50,7 @@ const CardBody = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15px 0;
+  margin: 5px 0;
   p {
     margin: 0;
     &:first-child {
@@ -78,14 +73,23 @@ const CardFooter = styled.div`
     object-fit: contain;
   }
   p {
-    color: ${(props) => props.theme.colors.limeGreen};
+    color: ${(props) => props.followers >= 0 ? props.theme.colors.limeGreen : props.theme.colors.brightRed};
   }
 `;
+
+const StyledBorder = styled.div`
+  height: 5px;
+  background: ${props => props.theme.colors[props.social_media]};
+  position: absolute;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+`
 
 const Card = (props) => {
   const cardData = props.data[props.social_media];
   return (
     <StyledCard social_media={props.social_media}>
+      <StyledBorder social_media={props.social_media} />
       <CardHeader>
         {props.social_media === "facebook" && <img src={facebook} alt="logo" />}
         {props.social_media === "twitter" && <img src={twitter} alt="logo" />}
@@ -99,9 +103,13 @@ const Card = (props) => {
         {props.social_media && <p>{cardData.followers}</p>}
         <p>Followers</p>
       </CardBody>
-      <CardFooter>
+      <CardFooter followers={cardData.todayFollowers}>
         <img src={cardData.todayFollowers >= 0 ? up : down} alt="logo" />
-        {props.data && <p>{cardData.todayFollowers} Today</p>}
+        {props.data && (
+          <p>
+            {cardData.todayFollowers >= 0 ? cardData.todayFollowers : cardData.todayFollowers*(-1)}
+          </p>
+        )}
       </CardFooter>
     </StyledCard>
   );
