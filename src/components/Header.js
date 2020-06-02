@@ -10,7 +10,7 @@ const H1 = styled.h1`
 
 const P = styled.p`
   color: ${props => props.theme.colors.textSecondary};
-  margin-top: 0;
+  margin: 0;
   font-weight: 700;
 `
 

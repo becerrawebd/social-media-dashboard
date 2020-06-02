@@ -11,8 +11,7 @@ const StyledCard = styled.div`
   width: 100%;
   border-radius: 5px;
   background: ${(props) => props.theme.colors.backgroundCard};
-  transition: 1s;
-
+  cursor: pointer;
   &:hover {
     background: ${(props) => props.theme.colors.hoverCard};
   }
@@ -25,7 +24,6 @@ const CardTodayHeader = styled.div`
   padding-right: 1.5rem;
   align-items: center;
   color: ${(props) => props.theme.colors.textSecondary};
-  transition: 1s;
   font-weight: 700;
   img {
     object-fit: contain;
@@ -40,7 +38,6 @@ const CardTodayBody = styled.div`
   p:first-child {
     margin: 0;
     color: ${(props) => props.theme.colors.textPrimary};
-    transition: 1s;
     font-size: 1.5rem;
   }
 `;

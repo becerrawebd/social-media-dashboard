@@ -12,11 +12,9 @@ const StyledCard = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 0.5rem;
-  padding-top: 0;
+  padding: 0;
   position: relative;
   margin-bottom: 1rem;
-  transition: 1s;
   background: ${(props) => props.theme.colors.backgroundCard};
   border-radius: 5px;
   cursor: pointer;
@@ -44,7 +42,6 @@ const CardHeader = styled.div`
     font-weight: 700;
     font-size: 13px;
     color: ${(props) => props.theme.colors.textSecondary};
-    transition: .5s;
   }
 `;
 
@@ -58,14 +55,12 @@ const CardBody = styled.div`
       font-size: 3rem;
       font-weight: 700;
       color: ${(props) => props.theme.colors.textPrimary};
-      transition: .5s;
     }
     &:last-child {
       font-size: 0.7rem;
       letter-spacing: 5px;
       text-transform: uppercase;
       color: ${(props) => props.theme.colors.textSecondary};
-      transition: .5s;
     }
   }
 `;
@@ -76,17 +71,20 @@ const CardFooter = styled.div`
     object-fit: contain;
   }
   p {
-    color: ${(props) => props.followers >= 0 ? props.theme.colors.limeGreen : props.theme.colors.brightRed};
+    color: ${(props) =>
+      props.followers >= 0
+        ? props.theme.colors.limeGreen
+        : props.theme.colors.brightRed};
   }
 `;
 
 const StyledBorder = styled.div`
   height: 5px;
-  background: ${props => props.theme.colors[props.social_media]};
+  background: ${(props) => props.theme.colors[props.social_media]};
   position: absolute;
   width: 100%;
   border-radius: 5px 5px 0 0;
-`
+`;
 
 const Card = (props) => {
   const cardData = props.data[props.social_media];
@@ -110,7 +108,9 @@ const Card = (props) => {
         <img src={cardData.todayFollowers >= 0 ? up : down} alt="logo" />
         {props.data && (
           <p>
-            {cardData.todayFollowers >= 0 ? cardData.todayFollowers : cardData.todayFollowers*(-1)}
+            {cardData.todayFollowers >= 0
+              ? cardData.todayFollowers
+              : cardData.todayFollowers * -1}
           </p>
         )}
       </CardFooter>

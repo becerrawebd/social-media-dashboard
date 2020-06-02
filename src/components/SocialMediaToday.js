@@ -8,13 +8,19 @@ const H2 = styled.h2`
   margin: 5px 0;
 `;
 
+const Div = styled.div`
+  width: 100%;
+  margin: 0;
+  padding: 0;
+`
+
 const SocialMediaToday = ({ data }) => {
   return (
     <Container>
-      <div>
+      <Div>
         <H2>Overview - Today</H2>
         <GridTodayCards data={data}/>
-      </div>
+      </Div>
     </Container>
   );
 };

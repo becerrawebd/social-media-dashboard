@@ -21,7 +21,7 @@ const CheckBoxLabel = styled.label`
     margin: 1px 2px;
     content: "";
     display: block;
-    background: ${(props) => props.theme.colors.backgroundLayout};
+    background: ${(props) => props.theme.colors.backgroundLayout}; 
     box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
   }

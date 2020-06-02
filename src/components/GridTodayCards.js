@@ -3,7 +3,7 @@ import styled from "styled-components";
 import CardToday from "./CardToday";
 
 const StyledGrid = styled.div`
-    width: 80vw;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -13,7 +13,6 @@ const StyledGrid = styled.div`
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         column-gap: 2rem;
-        row-gap: 1rem;
     }
 `
 
