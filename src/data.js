@@ -5,12 +5,12 @@ const data = {
         followers: 1987,
         todayFollowers: 12,
         overview_today: {
-            views: {
+            page_views: {
                 total: 87,
                 percentage: 3
             },
             likes: {
-                likes: 52,
+                total: 52,
                 percentage: -2
             }
         }
@@ -22,11 +22,11 @@ const data = {
         todayFollowers: 99,
         overview_today: {
             retweets: {
-                total: 87,
+                total: 117,
                 percentage: 303
             },
             likes: {
-                total: 52,
+                total: 507,
                 percentage: 553
             }
         }
@@ -37,7 +37,7 @@ const data = {
         followers: 11000,
         todayFollowers: 1099,
         overview_today: {
-            views: {
+            profile_views: {
                 total: 52000,
                 percentage: 1375
             },
@@ -53,7 +53,7 @@ const data = {
         followers: 8239,
         todayFollowers: -144,
         overview_today: {
-            views: {
+            total_views: {
                 total: 1407,
                 percentage: -12
             },

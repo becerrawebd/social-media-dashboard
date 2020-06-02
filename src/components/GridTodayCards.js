@@ -19,14 +19,14 @@ const StyledGrid = styled.div`
 const GridTodayCards = ({data}) => {
     return ( 
         <StyledGrid>
-            <CardToday social_media="facebook" data={data}/>
-            <CardToday social_media="facebook" data={data}/>
-            <CardToday social_media="instagram" data={data}/>
-            <CardToday social_media="instagram" data={data}/>
-            <CardToday social_media="twitter" data={data}/>
-            <CardToday social_media="twitter" data={data}/>
-            <CardToday social_media="youtube" data={data}/>
-            <CardToday social_media="youtube" data={data}/>
+            <CardToday social_media="facebook" data={data.facebook.overview_today.page_views} title="Page Views"/>
+            <CardToday social_media="facebook" data={data.facebook.overview_today.likes} title="Likes"/>
+            <CardToday social_media="instagram" data={data.instagram.overview_today.likes} title="Likes"/>
+            <CardToday social_media="instagram" data={data.instagram.overview_today.profile_views} title="Profile Views"/>
+            <CardToday social_media="twitter" data={data.twitter.overview_today.retweets} title="Retweets"/>
+            <CardToday social_media="twitter" data={data.twitter.overview_today.likes} title="Likes"/>
+            <CardToday social_media="youtube" data={data.youtube.overview_today.likes} title="Likes"/>
+            <CardToday social_media="youtube" data={data.youtube.overview_today.total_views} title="Total Views"/>
         </StyledGrid>
      );
 }

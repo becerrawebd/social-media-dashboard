@@ -40,14 +40,21 @@ const CardTodayBody = styled.div`
     color: ${(props) => props.theme.colors.textPrimary};
     font-size: 1.5rem;
   }
+  p:last-child {
+    display: flex;
+    img {
+      object-fit: contain;
+    }
+    color: ${props => props.percentage >= 0 ? props.theme.colors.limeGreen : props.theme.colors.brightRed}
+  }
 `;
 
 const CardToday = (props) => {
-  const { overview_today } = props.data[props.social_media];
+  const cardData = props.data;
   return (
     <StyledCard>
       <CardTodayHeader>
-        <p>Page Views</p>
+        <p>{props.title}</p>
         {props.social_media === "facebook" && <img src={facebook} alt="logo" />}
         {props.social_media === "twitter" && <img src={twitter} alt="logo" />}
         {props.social_media === "instagram" && (
@@ -55,12 +62,11 @@ const CardToday = (props) => {
         )}
         {props.social_media === "youtube" && <img src={youtube} alt="logo" />}
       </CardTodayHeader>
-      <CardTodayBody>
-        {overview_today.views && (<p>{overview_today.views.total}</p>)}
-        {overview_today.likes && (<p>{overview_today.likes.total}</p>)}
+      <CardTodayBody percentage={cardData.percentage}>
+        <p>{cardData.total}</p>
         <p>
-          <img src={up} alt="logo" />
-          3%
+          <img src={cardData.percentage >= 0 ? up : down} alt="logo" />
+          {cardData.percentage >= 0 ? cardData.percentage : cardData.percentage*(-1)}%
         </p>
       </CardTodayBody>
     </StyledCard>
