@@ -3,22 +3,31 @@ import styled from "styled-components";
 import CardToday from "./CardToday";
 
 const StyledGrid = styled.div`
+    width: 80vw;
     display: grid;
-    grid-template-columns: 50px 50px 50px 50px;
-    grid-template-rows: 20px 20px 20px 20x;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    @media screen and (min-width: 768px){
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 1rem;
+    }
 `
 
-const GridTodayCards = () => {
+const GridTodayCards = ({data}) => {
     return ( 
         <StyledGrid>
-            <CardToday />
-            <CardToday />
-            <CardToday />
-            <CardToday />
-            <CardToday />
-            <CardToday />
-            <CardToday />
-            <CardToday />
+            <CardToday social_media="facebook" data={data}/>
+            <CardToday social_media="facebook" data={data}/>
+            <CardToday social_media="instagram" data={data}/>
+            <CardToday social_media="instagram" data={data}/>
+            <CardToday social_media="twitter" data={data}/>
+            <CardToday social_media="twitter" data={data}/>
+            <CardToday social_media="youtube" data={data}/>
+            <CardToday social_media="youtube" data={data}/>
         </StyledGrid>
      );
 }

@@ -10,6 +10,7 @@ const Layout = styled.div`
   font-family: Inter;
   width: 100vw;
   min-height: 100vh;
+  transition: 1s;
   background: ${props => props.theme.colors.backgroundLayout};
   display: flex;
   flex-direction: column;

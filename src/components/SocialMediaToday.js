@@ -4,19 +4,19 @@ import Container from "./Container";
 import GridTodayCards from "./GridTodayCards";
 
 const H2 = styled.h2`
-    color: ${props => props.theme.colors.textPrimary};
-    margin: 5px 0;
-`
+  color: ${(props) => props.theme.colors.textPrimary};
+  margin: 5px 0;
+`;
 
-const SocialMediaToday = ({data}) => {
+const SocialMediaToday = ({ data }) => {
   return (
     <Container>
-        <div>
+      <div>
         <H2>Overview - Today</H2>
-        <GridTodayCards />
-        </div>
+        <GridTodayCards data={data}/>
+      </div>
     </Container>
-    );
+  );
 };
 
 export default SocialMediaToday;

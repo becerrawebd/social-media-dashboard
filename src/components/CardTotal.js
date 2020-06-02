@@ -16,6 +16,7 @@ const StyledCard = styled.div`
   padding-top: 0;
   position: relative;
   margin-bottom: 1rem;
+  transition: 1s;
   background: ${(props) => props.theme.colors.backgroundCard};
   border-radius: 5px;
   cursor: pointer;
@@ -34,7 +35,7 @@ const StyledCard = styled.div`
 const CardHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   img {
     object-fit: contain;
     margin-right: 7px;
@@ -43,6 +44,7 @@ const CardHeader = styled.div`
     font-weight: 700;
     font-size: 13px;
     color: ${(props) => props.theme.colors.textSecondary};
+    transition: .5s;
   }
 `;
 
@@ -50,19 +52,20 @@ const CardBody = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5px 0;
   p {
     margin: 0;
     &:first-child {
-      font-size: 4rem;
+      font-size: 3rem;
       font-weight: 700;
       color: ${(props) => props.theme.colors.textPrimary};
+      transition: .5s;
     }
     &:last-child {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       letter-spacing: 5px;
       text-transform: uppercase;
       color: ${(props) => props.theme.colors.textSecondary};
+      transition: .5s;
     }
   }
 `;
