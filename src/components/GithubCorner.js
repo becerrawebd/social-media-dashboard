@@ -32,6 +32,7 @@ const GithubCorner = () => {
       href="https://github.com/becerrawebd/social-media-dashboard"
       target="_blank"
       aria_label="View source on GitHub"
+      rel="noopener noreferrer"
     >
       <StyledGithubLogo />
     </A>

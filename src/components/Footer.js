@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "./Container";
 import styled from "styled-components";
 
 const StyledFooter = styled.footer`
@@ -22,7 +21,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       Design by{" "}
-      <a href="https://www.frontendmentor.io/" target="_blank">
+      <a href="https://www.frontendmentor.io/" target="_blank" rel="noopener noreferrer">
         Frontend Mentor
       </a>{" "}
       | Coded by Diego Becerra | becerradiego94@gmail.com
