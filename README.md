@@ -4,13 +4,14 @@ Resolucion del challenge propuesto por Frontend Mentor en el cual se maqueta un 
 
 ### Mobile
 
-(https://raw.githubusercontent.com/becerrawebd/social-media-dashboard/master/src/images/designs/social-media-dashboard-mobile-dark.png) (https://raw.githubusercontent.com/becerrawebd/social-media-dashboard/master/src/images/designs/social-media-dashboard-mobile-dark.png)
+<p>
+  <img src="https://raw.githubusercontent.com/becerrawebd/social-media-dashboard/master/src/images/designs/social-media-dashboard-mobile-dark.png" />   
+  <img src="https://raw.githubusercontent.com/becerrawebd/social-media-dashboard/master/src/images/designs/social-media-dashboard-mobile-light.png" />
+</p>
 
 ### Desktop
 
-![Fallo la carga del maquetado mobile]
-(https://raw.githubusercontent.com/becerrawebd/social-media-dashboard/master/src/images/designs/social-media-dashboard-desktop.png)
-
+<img src="https://raw.githubusercontent.com/becerrawebd/social-media-dashboard/master/src/images/designs/social-media-dashboard-desktop.png" />
 
 ### Construido con
 
