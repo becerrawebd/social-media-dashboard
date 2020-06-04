@@ -4,7 +4,6 @@ Resolucion del challenge propuesto por Frontend Mentor en el cual se maqueta un 
 
 ### Mobile
 
-![Fallo la carga del maquetado mobile]
 (https://raw.githubusercontent.com/becerrawebd/social-media-dashboard/master/src/images/designs/social-media-dashboard-mobile-dark.png) (https://raw.githubusercontent.com/becerrawebd/social-media-dashboard/master/src/images/designs/social-media-dashboard-mobile-dark.png)
 
 ### Desktop
