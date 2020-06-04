@@ -34,6 +34,9 @@ const CardHeader = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top: 0.5rem;
+  @media screen and (min-width: 1400px){
+    padding-top: 1.5rem;
+  }
   img {
     object-fit: contain;
     margin-right: 7px;
@@ -49,6 +52,10 @@ const CardBody = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (min-width: 1400px) {
+    margin: 1rem 0;
+  }
+  
   p {
     margin: 0;
     &:first-child {
@@ -67,6 +74,9 @@ const CardBody = styled.div`
 
 const CardFooter = styled.div`
   display: flex;
+  @media screen and (min-width: 1400px){
+    padding-bottom: 1rem;
+  }
   img {
     object-fit: contain;
   }

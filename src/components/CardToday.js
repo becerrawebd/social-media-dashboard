@@ -22,6 +22,11 @@ const CardTodayHeader = styled.div`
   justify-content: space-between;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  @media screen and (min-width: 1400px){
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 1rem;
+  }
   align-items: center;
   color: ${(props) => props.theme.colors.textSecondary};
   font-weight: 700;
@@ -34,6 +39,11 @@ const CardTodayBody = styled.div`
   justify-content: space-between;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  @media screen and (min-width: 1400px){
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 1rem;
+  }
   align-items: center;
   p:first-child {
     margin: 0;
@@ -45,7 +55,10 @@ const CardTodayBody = styled.div`
     img {
       object-fit: contain;
     }
-    color: ${props => props.percentage >= 0 ? props.theme.colors.limeGreen : props.theme.colors.brightRed}
+    color: ${(props) =>
+      props.percentage >= 0
+        ? props.theme.colors.limeGreen
+        : props.theme.colors.brightRed};
   }
 `;
 
@@ -66,7 +79,10 @@ const CardToday = (props) => {
         <p>{cardData.total}</p>
         <p>
           <img src={cardData.percentage >= 0 ? up : down} alt="logo" />
-          {cardData.percentage >= 0 ? cardData.percentage : cardData.percentage*(-1)}%
+          {cardData.percentage >= 0
+            ? cardData.percentage
+            : cardData.percentage * -1}
+          %
         </p>
       </CardTodayBody>
     </StyledCard>
